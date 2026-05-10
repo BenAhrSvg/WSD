@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-wsd-navy: #0A1F44;
-  --color-wsd-obsidian: #020617;
-  --color-wsd-signal: #FDE047;
-  --color-wsd-alert: #EAB308;
+  --color-wsp-navy: #0A1F44;
+  --color-wsp-obsidian: #020617;
+  --color-wsp-signal: #FDE047;
+  --color-wsp-alert: #EAB308;
   
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 }
@@ -15,12 +15,12 @@
   }
   
   body {
-    @apply bg-white text-wsd-obsidian antialiased;
+    @apply bg-white text-wsp-obsidian antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
   ::selection {
-    @apply bg-wsd-signal text-wsd-obsidian;
+    @apply bg-wsp-signal text-wsp-obsidian;
   }
 }
 
@@ -34,10 +34,10 @@
   }
   
   .btn-primary {
-    @apply h-20 bg-wsd-navy text-white font-black uppercase italic px-12 flex items-center justify-between border-b-8 border-wsd-obsidian transition-transform active:translate-y-1 active:border-b-4 cursor-pointer;
+    @apply h-20 bg-wsp-navy text-white font-black uppercase italic px-12 flex items-center justify-between border-b-8 border-wsp-obsidian transition-transform active:translate-y-1 active:border-b-4 cursor-pointer;
   }
   
   .btn-emergency {
-    @apply h-16 px-12 bg-wsd-signal font-black uppercase tracking-widest text-xs hover:bg-wsd-alert transition-colors flex items-center justify-center gap-2 cursor-pointer;
+    @apply h-16 px-12 bg-wsp-signal font-black uppercase tracking-widest text-xs hover:bg-wsp-alert transition-colors flex items-center justify-center gap-2 cursor-pointer;
   }
 }

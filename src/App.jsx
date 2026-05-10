@@ -38,24 +38,24 @@ const Nav = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-sm h-20" : "bg-transparent h-24"}`}>
       <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-wsd-navy flex items-center justify-center">
-            <Shield size={20} className="text-wsd-signal" />
+          <div className="w-10 h-10 bg-wsp-navy flex items-center justify-center">
+            <Shield size={20} className="text-wsp-signal" />
           </div>
-          <span className={`font-black text-2xl uppercase tracking-tighter italic ${scrolled ? "text-wsd-navy" : "text-white"}`}>WSD</span>
+          <span className={`font-black text-2xl uppercase tracking-tighter italic ${scrolled ? "text-wsp-navy" : "text-white"}`}>WSP</span>
         </div>
         
         <div className="hidden md:flex items-center gap-12">
           {["Leistungen", "Über Uns", "Partner", "Jobs", "Kontakt"].map((item) => (
-            <a key={item} href={`#${item.toLowerCase().replace(" ", "-")}`} className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${scrolled ? "text-slate-400 hover:text-wsd-navy" : "text-white/60 hover:text-white"}`}>
+            <a key={item} href={`#${item.toLowerCase().replace(" ", "-")}`} className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${scrolled ? "text-slate-400 hover:text-wsp-navy" : "text-white/60 hover:text-white"}`}>
               {item}
             </a>
           ))}
-          <button className="btn-emergency px-8 h-12 shadow-lg shadow-wsd-signal/20">
+          <button className="btn-emergency px-8 h-12 shadow-lg shadow-wsp-signal/20">
             NOTRUF 24/7
           </button>
         </div>
         
-        <button className={`md:hidden ${scrolled ? "text-wsd-navy" : "text-white"}`} onClick={() => setIsOpen(!isOpen)}>
+        <button className={`md:hidden ${scrolled ? "text-wsp-navy" : "text-white"}`} onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -74,7 +74,7 @@ const Nav = () => {
                   key={item} 
                   href={`#${item.toLowerCase().replace(" ", "-")}`} 
                   onClick={() => setIsOpen(false)}
-                  className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 hover:text-wsd-navy"
+                  className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 hover:text-wsp-navy"
                 >
                   {item}
                 </a>
@@ -95,10 +95,10 @@ const Hero = () => (
     <div className="absolute inset-0 z-0">
       <img 
         src="/hero.png" 
-        alt="WSD Team" 
+        alt="WSP Team" 
         className="w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-wsd-obsidian/85 md:bg-wsd-obsidian/75"></div>
+      <div className="absolute inset-0 bg-wsp-obsidian/85 md:bg-wsp-obsidian/75"></div>
     </div>
 
     <div className="section-container relative z-10 pt-24 text-white">
@@ -107,24 +107,24 @@ const Hero = () => (
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="bg-wsd-signal inline-block px-4 py-1 mb-12">
-          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-wsd-obsidian">
+        <div className="bg-wsp-signal inline-block px-4 py-1 mb-12">
+          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-wsp-obsidian">
             EST. 2018 | Westfalen
           </span>
         </div>
         <h1 className="text-[clamp(2.5rem,10vw,9rem)] font-black uppercase tracking-tighter leading-[0.8] mb-12 italic break-words max-w-[90vw]">
-          Sicherheit <br /> <span className="text-wsd-signal">durch</span> <br /> Struktur.
+          Sicherheit <br /> <span className="text-wsp-signal">durch</span> <br /> Struktur.
         </h1>
         <p className="text-lg md:text-2xl text-slate-300 max-w-2xl font-medium leading-relaxed mb-16">
           Präzision in der Bewachung. Kompromisslose Funktionalität. 
-          Wir definieren Sicherheit neu durch <span className="text-white font-bold underline decoration-wsd-signal decoration-4 underline-offset-8">klinische Exzellenz</span> und operative Stärke.
+          Wir definieren Sicherheit neu durch <span className="text-white font-bold underline decoration-wsp-signal decoration-4 underline-offset-8">klinische Exzellenz</span> und operative Stärke.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 md:gap-8">
-          <button className="btn-primary min-w-[280px] md:min-w-[320px] group border-wsd-signal">
+          <button className="btn-primary min-w-[280px] md:min-w-[320px] group border-wsp-signal">
             Leistung Anfordern <ArrowRight size={24} />
           </button>
-          <a href="#leistungen" className="h-20 px-12 border-2 border-white/20 font-black uppercase tracking-widest text-xs hover:border-wsd-signal transition-colors text-white flex items-center justify-center">
+          <a href="#leistungen" className="h-20 px-12 border-2 border-white/20 font-black uppercase tracking-widest text-xs hover:border-wsp-signal transition-colors text-white flex items-center justify-center">
             Unsere Spezifikationen
           </a>
         </div>
@@ -146,7 +146,7 @@ const ServiceDetail = ({ service, onClose }) => {
       <div className="max-w-7xl mx-auto px-6 py-24 min-h-screen">
         <button 
           onClick={onClose}
-          className="mb-16 flex items-center gap-4 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-wsd-navy transition-colors"
+          className="mb-16 flex items-center gap-4 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-wsp-navy transition-colors"
         >
           <ArrowLeft size={16} /> Zurück zur Übersicht
         </button>
@@ -157,27 +157,27 @@ const ServiceDetail = ({ service, onClose }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <div className="w-12 h-1 bg-wsd-signal mb-12"></div>
+            <div className="w-12 h-1 bg-wsp-signal mb-12"></div>
             <h2 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-12">{service.title}</h2>
             <p className="text-xl text-slate-500 leading-relaxed font-medium mb-16 whitespace-pre-line">
               {service.fullDescription}
             </p>
 
             <div className="bg-slate-50 p-12 border border-slate-100">
-              <h3 className="text-xs font-black uppercase tracking-[0.3em] text-wsd-navy mb-10 flex items-center gap-4">
-                <span className="w-8 h-px bg-wsd-signal"></span> Unsere Leistungen umfassen
+              <h3 className="text-xs font-black uppercase tracking-[0.3em] text-wsp-navy mb-10 flex items-center gap-4">
+                <span className="w-8 h-px bg-wsp-signal"></span> Unsere Leistungen umfassen
               </h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {service.points.map((point, i) => (
                   <li key={i} className="flex items-center gap-4 text-sm font-bold text-slate-600 uppercase italic">
-                    <CheckCircle2 size={18} className="text-wsd-signal flex-shrink-0" />
+                    <CheckCircle2 size={18} className="text-wsp-signal flex-shrink-0" />
                     {point}
                   </li>
                 ))}
               </ul>
             </div>
             
-            <button className="btn-primary w-full mt-12 border-wsd-signal">
+            <button className="btn-primary w-full mt-12 border-wsp-signal">
               Diese Leistung Anfragen <ArrowRight size={24} />
             </button>
           </motion.div>
@@ -191,7 +191,7 @@ const ServiceDetail = ({ service, onClose }) => {
             <div className="aspect-[3/4] overflow-hidden border border-slate-100 shadow-2xl">
               <img src={service.img} alt={service.title} className="w-full h-full object-cover" />
             </div>
-            <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-wsd-signal/10 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-wsp-signal/10 rounded-full blur-3xl"></div>
           </motion.div>
         </div>
       </div>
@@ -208,17 +208,17 @@ const ServiceCard = ({ icon: Icon, title, description, delay, onOpen }) => (
     className="clinical-card group flex flex-col h-full cursor-pointer"
     onClick={onOpen}
   >
-    <div className="w-12 h-1 bg-wsd-signal mb-10 transition-all duration-500 group-hover:w-full"></div>
+    <div className="w-12 h-1 bg-wsp-signal mb-10 transition-all duration-500 group-hover:w-full"></div>
     <div className="flex justify-between items-start mb-8 gap-4">
       <h3 className="text-2xl md:text-3xl font-black uppercase italic tracking-tight leading-none">{title}</h3>
-      <div className="p-2 bg-slate-50 border border-slate-100 group-hover:bg-wsd-navy group-hover:text-wsd-signal transition-all duration-500 flex-shrink-0">
+      <div className="p-2 bg-slate-50 border border-slate-100 group-hover:bg-wsp-navy group-hover:text-wsp-signal transition-all duration-500 flex-shrink-0">
         <Icon size={24} />
       </div>
     </div>
     <p className="text-slate-500 leading-relaxed font-medium mb-8 flex-grow">
       {description}
     </p>
-    <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-wsd-navy group-hover:text-wsd-alert transition-colors">
+    <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-wsp-navy group-hover:text-wsp-alert transition-colors">
       Spezifikation Einsehen <ChevronRight size={14} />
     </div>
   </motion.div>
@@ -293,7 +293,7 @@ const Services = () => {
   return (
     <section id="leistungen" className="bg-white">
       <div className="section-container">
-        <div className="flex items-baseline gap-6 mb-24 border-b border-wsd-obsidian pb-8">
+        <div className="flex items-baseline gap-6 mb-24 border-b border-wsp-obsidian pb-8">
           <span className="text-4xl font-black opacity-10 tracking-tighter">01</span>
           <h2 className="text-4xl font-black uppercase tracking-tight">Leistungsspektrum</h2>
         </div>
@@ -319,8 +319,8 @@ const Services = () => {
 
 const AboutUs = () => {
   return (
-    <section id="über-uns" className="bg-wsd-navy text-white py-40 overflow-hidden relative">
-      <div className="absolute top-0 right-0 w-64 h-64 bg-wsd-signal/5 -mr-32 -mt-32 rounded-full blur-3xl"></div>
+    <section id="über-uns" className="bg-wsp-navy text-white py-40 overflow-hidden relative">
+      <div className="absolute top-0 right-0 w-64 h-64 bg-wsp-signal/5 -mr-32 -mt-32 rounded-full blur-3xl"></div>
       
       <div className="section-container relative z-10">
         <div className="flex items-baseline gap-6 mb-24 border-b border-white/20 pb-8">
@@ -330,12 +330,12 @@ const AboutUs = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
           <div className="space-y-8">
-            <h3 className="text-wsd-signal text-3xl font-black uppercase italic tracking-tight leading-tight">
+            <h3 className="text-wsp-signal text-3xl font-black uppercase italic tracking-tight leading-tight">
               Sicherheit ist Vertrauenssache. <br /> Wir sind Ihr Partner in Wuppertal.
             </h3>
             <div className="space-y-6 text-slate-400 font-medium leading-relaxed">
               <p>
-                Der westfälische Sicherheitsdienst ist ein in Wuppertal ansässiges Dienstleistungsunternehmen in der Bewachungsbranche. 
+                Der Westfälischer Sicherheitspartner ist ein in Wuppertal ansässiges Dienstleistungsunternehmen in der Bewachungsbranche. 
                 Vertrauen, Transparenz und Wertschätzung sind uns wichtig. Als Grundlage für unsere Zusammenarbeit, für die Zufriedenheit unserer Kunden und für den gegenseitigen Erfolg.
               </p>
               <p>
@@ -357,8 +357,8 @@ const AboutUs = () => {
               { title: "Wertschätzung", text: "Respektvoller Umgang mit Kunden und Mitarbeitern." },
               { title: "Qualität", text: "Regelmäßige Schulung und VdS-Zertifizierung." }
             ].map((p, i) => (
-              <div key={i} className="bg-white/5 p-8 border border-white/10 hover:border-wsd-signal transition-colors group">
-                <h4 className="text-wsd-signal text-xl font-black uppercase italic mb-4 group-hover:translate-x-2 transition-transform">{p.title}</h4>
+              <div key={i} className="bg-white/5 p-8 border border-white/10 hover:border-wsp-signal transition-colors group">
+                <h4 className="text-wsp-signal text-xl font-black uppercase italic mb-4 group-hover:translate-x-2 transition-transform">{p.title}</h4>
                 <p className="text-slate-500 text-sm">{p.text}</p>
               </div>
             ))}
@@ -380,7 +380,7 @@ const Partners = () => {
         <h3 className="text-center text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 mb-16">Unsere Partner & Zertifizierungen</h3>
         <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
           {partners.map(p => (
-            <span key={p} className="text-lg md:text-2xl font-black uppercase tracking-tighter italic border-b-4 border-slate-200 px-3 hover:border-wsd-signal transition-colors cursor-default">{p}</span>
+            <span key={p} className="text-lg md:text-2xl font-black uppercase tracking-tighter italic border-b-4 border-slate-200 px-3 hover:border-wsp-signal transition-colors cursor-default">{p}</span>
           ))}
         </div>
       </div>
@@ -391,35 +391,35 @@ const Partners = () => {
 const Jobs = () => (
   <section id="jobs" className="bg-white">
     <div className="section-container">
-      <div className="flex items-baseline gap-6 mb-24 border-b border-wsd-obsidian pb-8">
+      <div className="flex items-baseline gap-6 mb-24 border-b border-wsp-obsidian pb-8">
         <span className="text-4xl font-black opacity-10 tracking-tighter">03</span>
         <h2 className="text-4xl font-black uppercase tracking-tight">Karriere</h2>
       </div>
       
-      <div className="clinical-card max-w-4xl border-l-8 border-l-wsd-signal">
+      <div className="clinical-card max-w-4xl border-l-8 border-l-wsp-signal">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
           <div>
             <h3 className="text-3xl font-black uppercase italic mb-2">Sicherheitskräfte (m/w/d)</h3>
-            <p className="text-wsd-navy font-bold text-sm">Standort: Wuppertal & Umgebung</p>
+            <p className="text-wsp-navy font-bold text-sm">Standort: Wuppertal & Umgebung</p>
           </div>
-          <div className="bg-wsd-navy text-white px-6 py-2 text-xs font-black uppercase tracking-widest italic">Jetzt Bewerben</div>
+          <div className="bg-wsp-navy text-white px-6 py-2 text-xs font-black uppercase tracking-widest italic">Jetzt Bewerben</div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           <div>
             <h4 className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-2">
-              <Target size={12} className="text-wsd-signal" /> Qualifikationsprofil
+              <Target size={12} className="text-wsp-signal" /> Qualifikationsprofil
             </h4>
             <ul className="space-y-4 text-slate-500 font-medium text-sm">
-              <li className="flex items-center gap-3"><div className="w-1 h-1 bg-wsd-signal"></div> Sachkundeprüfung §34a GewO</li>
-              <li className="flex items-center gap-3"><div className="w-1 h-1 bg-wsd-signal"></div> Einwandfreies Führungszeugnis</li>
-              <li className="flex items-center gap-3"><div className="w-1 h-1 bg-wsd-signal"></div> Professionelles Auftreten</li>
-              <li className="flex items-center gap-3"><div className="w-1 h-1 bg-wsd-signal"></div> Schichtbereitschaft</li>
+              <li className="flex items-center gap-3"><div className="w-1 h-1 bg-wsp-signal"></div> Sachkundeprüfung §34a GewO</li>
+              <li className="flex items-center gap-3"><div className="w-1 h-1 bg-wsp-signal"></div> Einwandfreies Führungszeugnis</li>
+              <li className="flex items-center gap-3"><div className="w-1 h-1 bg-wsp-signal"></div> Professionelles Auftreten</li>
+              <li className="flex items-center gap-3"><div className="w-1 h-1 bg-wsp-signal"></div> Schichtbereitschaft</li>
             </ul>
           </div>
           <div>
             <h4 className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-2">
-              <Briefcase size={12} className="text-wsd-signal" /> Einsatzbereiche
+              <Briefcase size={12} className="text-wsp-signal" /> Einsatzbereiche
             </h4>
             <div className="flex flex-wrap gap-2">
               {["Objektschutz", "Events", "Brandschutz", "Logistik", "Mobile Streife"].map(tag => (
@@ -431,8 +431,8 @@ const Jobs = () => (
         
         <div className="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-4">
-            <Mail className="text-wsd-signal" size={20} />
-            <p className="text-slate-500 text-xs font-bold">kontakt@wsd-bewachung.de</p>
+            <Mail className="text-wsp-signal" size={20} />
+            <p className="text-slate-500 text-xs font-bold">kontakt@wsp-sicherheit.de</p>
           </div>
           <button className="btn-primary min-w-[280px]">
             Direkt Bewerben <Briefcase size={20} />
@@ -446,7 +446,7 @@ const Jobs = () => (
 const Contact = () => (
   <section id="kontakt" className="bg-slate-50 border-t border-slate-100">
     <div className="section-container">
-      <div className="flex items-baseline gap-6 mb-24 border-b border-wsd-obsidian pb-8">
+      <div className="flex items-baseline gap-6 mb-24 border-b border-wsp-obsidian pb-8">
         <span className="text-4xl font-black opacity-10 tracking-tighter">04</span>
         <h2 className="text-4xl font-black uppercase tracking-tight">Kommandozentrale</h2>
       </div>
@@ -458,13 +458,13 @@ const Contact = () => (
             {[
               { icon: MapPin, label: "Zentrale", val: "Simonsstr. 47, 42117 Wuppertal" },
               { icon: Phone, label: "Mobil", val: "01514 5960347", link: true },
-              { icon: Mail, label: "E-Mail", val: "kontakt@wsd-bewachung.de" }
+              { icon: Mail, label: "E-Mail", val: "kontakt@wsp-sicherheit.de" }
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-6 group">
-                <item.icon className="text-wsd-signal mt-1 transition-transform group-hover:scale-110" size={24} />
+                <item.icon className="text-wsp-signal mt-1 transition-transform group-hover:scale-110" size={24} />
                 <div>
                   <h4 className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{item.label}</h4>
-                  <p className={`font-bold text-xl italic ${item.link ? "underline decoration-wsd-signal underline-offset-4" : ""} text-wsd-navy`}>
+                  <p className={`font-bold text-xl italic ${item.link ? "underline decoration-wsp-signal underline-offset-4" : ""} text-wsp-navy`}>
                     {item.val}
                   </p>
                 </div>
@@ -474,33 +474,33 @@ const Contact = () => (
         </div>
         
         <div className="bg-white p-8 md:p-12 border border-slate-200 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-1 bg-wsd-signal"></div>
+          <div className="absolute top-0 right-0 w-32 h-1 bg-wsp-signal"></div>
           <form className="space-y-8 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-2">
                 <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Name*</label>
-                <input type="text" placeholder="IHR NAME" className="w-full bg-slate-50 border border-slate-200 h-16 px-6 focus:border-wsd-navy outline-none transition-all placeholder:text-slate-300 italic font-bold" />
+                <input type="text" placeholder="IHR NAME" className="w-full bg-slate-50 border border-slate-200 h-16 px-6 focus:border-wsp-navy outline-none transition-all placeholder:text-slate-300 italic font-bold" />
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Email*</label>
-                <input type="email" placeholder="IHRE EMAIL" className="w-full bg-slate-50 border border-slate-200 h-16 px-6 focus:border-wsd-navy outline-none transition-all placeholder:text-slate-300 italic font-bold" />
+                <input type="email" placeholder="IHRE EMAIL" className="w-full bg-slate-50 border border-slate-200 h-16 px-6 focus:border-wsp-navy outline-none transition-all placeholder:text-slate-300 italic font-bold" />
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-2">
                 <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Telefon</label>
-                <input type="tel" placeholder="IHRE NUMMER" className="w-full bg-slate-50 border border-slate-200 h-16 px-6 focus:border-wsd-navy outline-none transition-all placeholder:text-slate-300 italic font-bold" />
+                <input type="tel" placeholder="IHRE NUMMER" className="w-full bg-slate-50 border border-slate-200 h-16 px-6 focus:border-wsp-navy outline-none transition-all placeholder:text-slate-300 italic font-bold" />
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Grund</label>
-                <input type="text" placeholder="ANLIEGEN" className="w-full bg-slate-50 border border-slate-200 h-16 px-6 focus:border-wsd-navy outline-none transition-all placeholder:text-slate-300 italic font-bold" />
+                <input type="text" placeholder="ANLIEGEN" className="w-full bg-slate-50 border border-slate-200 h-16 px-6 focus:border-wsp-navy outline-none transition-all placeholder:text-slate-300 italic font-bold" />
               </div>
             </div>
             <div className="space-y-2">
               <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Ihre Nachricht*</label>
-              <textarea placeholder="WIE KÖNNEN WIR IHNEN HELFEN?" className="w-full bg-slate-50 border border-slate-200 h-40 p-6 focus:border-wsd-navy outline-none transition-all resize-none placeholder:text-slate-300 italic font-bold"></textarea>
+              <textarea placeholder="WIE KÖNNEN WIR IHNEN HELFEN?" className="w-full bg-slate-50 border border-slate-200 h-40 p-6 focus:border-wsp-navy outline-none transition-all resize-none placeholder:text-slate-300 italic font-bold"></textarea>
             </div>
-            <button className="btn-primary w-full border-wsd-signal">
+            <button className="btn-primary w-full border-wsp-signal">
               NACHRICHT ÜBERMITTELN <ArrowRight size={24} />
             </button>
           </form>
@@ -515,13 +515,13 @@ const Footer = () => (
     <div className="section-container flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
       <div className="space-y-8">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-wsd-navy flex items-center justify-center">
-            <Shield size={16} className="text-wsd-signal" />
+          <div className="w-8 h-8 bg-wsp-navy flex items-center justify-center">
+            <Shield size={16} className="text-wsp-signal" />
           </div>
-          <span className="font-black text-xl uppercase tracking-tighter italic text-wsd-navy">WSD</span>
+          <span className="font-black text-xl uppercase tracking-tighter italic text-wsp-navy">WSP</span>
         </div>
         <p className="text-[10px] text-slate-400 uppercase tracking-widest leading-loose">
-          Westfälischer Sicherheitsdienst <br />
+          Westfälischer Sicherheitspartner <br />
           Spezifikation 2026 / Rev. 4.2.1 <br />
           © 2018-2026 All Rights Reserved
         </p>
@@ -529,7 +529,7 @@ const Footer = () => (
       
       <div className="flex gap-8 text-[10px] font-black uppercase tracking-widest">
         {["Impressum", "Datenschutz", "VdS Richtlinien"].map(link => (
-          <a key={link} href="#" className="hover:text-wsd-navy border-b border-transparent hover:border-wsd-signal transition-all">
+          <a key={link} href="#" className="hover:text-wsp-navy border-b border-transparent hover:border-wsp-signal transition-all">
             {link}
           </a>
         ))}
@@ -544,7 +544,7 @@ const Footer = () => (
 
 export default function App() {
   return (
-    <div className="min-h-screen selection:bg-wsd-signal font-sans">
+    <div className="min-h-screen selection:bg-wsp-signal font-sans">
       <Nav />
       <Hero />
       <Services />
