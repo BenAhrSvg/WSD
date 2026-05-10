@@ -208,13 +208,13 @@ const ServiceCard = ({ icon: Icon, title, description, delay, onOpen }) => (
     className="clinical-card group flex flex-col h-full cursor-pointer"
     onClick={onOpen}
   >
-    <div className="w-12 h-1 bg-wsp-signal mb-10 transition-all duration-500 group-hover:w-full"></div>
-    <div className="flex justify-between items-start mb-8 gap-4">
-      <h3 className="text-2xl md:text-3xl font-black uppercase italic tracking-tight leading-none">{title}</h3>
+    <div className="flex items-center justify-between mb-6">
+      <div className="w-12 h-1 bg-wsp-signal transition-all duration-500 group-hover:w-24"></div>
       <div className="p-2 bg-slate-50 border border-slate-100 group-hover:bg-wsp-navy group-hover:text-wsp-signal transition-all duration-500 flex-shrink-0">
-        <Icon size={24} />
+        <Icon size={20} />
       </div>
     </div>
+    <h3 className="text-xl md:text-2xl font-black uppercase italic tracking-tight leading-tight mb-6">{title}</h3>
     <p className="text-slate-500 leading-relaxed font-medium mb-8 flex-grow">
       {description}
     </p>
