@@ -24,6 +24,8 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const base = import.meta.env.BASE_URL;
+
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -94,7 +96,7 @@ const Hero = () => (
   <header className="relative min-h-screen flex items-center overflow-hidden">
     <div className="absolute inset-0 z-0">
       <img 
-        src="/hero.png" 
+        src={`${base}hero.png`} 
         alt="WSP Team" 
         className="w-full h-full object-cover"
       />
@@ -232,7 +234,7 @@ const Services = () => {
       id: "objekt",
       icon: Shield, 
       title: "Objektschutz", 
-      img: "/s_objekt.png",
+      img: `${base}s_objekt.png`,
       description: "Klinische Überwachung industrieller Komplexe. Reduzierung auf das Wesentliche: Sicherheit.", 
       fullDescription: "Durch unsere Bewachung gewährleisten wir die Sicherheit von Kunden und Objekten rund um die Uhr. Es geht um den Schutz und die Bewachung von Unternehmen oder Privateigentum!\n\nWir bieten Ihnen gerne unsere Sicherheitsdienste an. Zu unseren Tätigkeiten gehören die Kontrolle der Zutritts- und Zufahrtslegitimation, die Kontrolle von Geländen und der Schutz vor Spionage, Vandalismus und Diebstahl. Dabei spielt die Ausbildung, die Erfahrung und die Kompetenz unserer Mitarbeiter eine große Rolle.",
       points: ["Bewachung von Gebäuden/Firmen", "Öffnungs- und Schließdienste", "Verschlusskontrollen", "Wachpersonal für Einkaufscenter", "Doormen / Doorman", "Schlüsselüberwachung", "Zugangskontrollen", "Kaufhausdetektion"],
@@ -242,7 +244,7 @@ const Services = () => {
       id: "event",
       icon: Zap, 
       title: "Veranstaltungen", 
-      img: "/s_event.png",
+      img: `${base}s_event.png`,
       description: "Strukturiertes Sicherheitsmanagement für Großevents. Präzision in jeder Situation.", 
       fullDescription: "Jede Veranstaltung ist potentiellen Risiken ausgesetzt. Schäden, sowohl Verstöße gegen die Rechtsordnung, wirtschaftliche Schäden, Reputationsschäden, sowie Gefahren für Rechtsgüter wie Leib, Leben oder Gesundheit sind bei Veranstaltungen wichtige Aspekte.\n\nDabei ist es egal, ob es sich um eine kleine Party oder eine Großveranstaltung handelt. Jede Veranstaltung ist auf die richtige Sicherheit angewiesen. Daher erstellen wir passend zu jeder Veranstaltung eine entsprechende Risikoanalyse und ein dazugehöriges Sicherheitskonzept.",
       points: ["Einlass-, Zugangs- und Zufahrtskontrollen", "Sicherung Backstage, Bühnen, Hallen", "Garderobendienst / Kassendienst", "Bewachung und Absicherung", "Präventionsmaßnahmen / Deeskalation", "Bühnenabsicherung", "Parkplatzordnung", "Ordnerdienst"],
@@ -252,7 +254,7 @@ const Services = () => {
       id: "fire",
       icon: Lock, 
       title: "Brandschutz", 
-      img: "/s_fire.png",
+      img: `${base}s_fire.png`,
       description: "Vermeidung von Gefahren für Leben und Eigentum. Vorbeugende Konzepte mit VdS-Standard.", 
       fullDescription: "Wesentliche Schutzziele des Brandschutzes sind es Leben, Gesundheit, Eigentum, Besitz und Umwelt zu schützen. Im bauordnungsrechtlichen Sinne dient der Brandschutz dem Schutz von Leib und Leben, der Umwelt und der öffentlichen Sicherheit.\n\nHierfür gibt es spezielle Brandmeldesysteme, um den Brand schnellstmöglich zu melden. Wir gewährleisten, dass im Falle eines Brandes mit technischem Defekt der Brandmeldesysteme eine Brandmeldung durch einen dafür ausgebildeten Mitarbeiter durchgeführt werden kann.",
       points: ["Allgemeine Ordnung", "Meldung des Brandes im Brandfall", "Sicherung des Rauchverbots", "Freihalten der Fluchtwege", "Flucht- und Rettungswegbeleuchtung"],
@@ -262,7 +264,7 @@ const Services = () => {
       id: "build",
       icon: Search, 
       title: "Baustellen", 
-      img: "/s_build.png",
+      img: `${base}s_build.png`,
       description: "Schutz vor Vandalismus und Diebstahl. Lückenlose Kontrolle Ihrer Ressourcen.", 
       fullDescription: "Jede Baustelle verlangt ein gewisses Maß an Sicherheit und Schutz vor kriminellem Missbrauch. Baustellen sind bevorzugte Angriffsziele für Kriminelle jeglicher Art. Besonders im Bereich des Vandalismus sind Baustellen oft beteiligte Schauplätze.\n\nWir bieten Schutz für Baustellen aller Art, wie Neubau, Altbausanierung, Umbau oder Erweiterungen an. Für einen reibungslosen Ablauf sorgt unser geschultes Personal, besonders im Bereich Präventiv- und Interventionsmaßnahmen.",
       points: ["Schutz vor kriminellem Missbrauch", "Vandalismus-Prävention", "Diebstahlschutz", "Areal-Sicherung", "Materialkontrolle", "Eingangsüberwachung"],
@@ -272,7 +274,7 @@ const Services = () => {
       id: "patrol",
       icon: Clock, 
       title: "Revierdienst", 
-      img: "/s_patrol.png",
+      img: `${base}s_patrol.png`,
       description: "Mobile Kontrolle und Verschlussdienste. Präsenz zeigen, wenn es darauf ankommt.", 
       fullDescription: "Im Gegensatz zu stationärem Objektschutz, umfasst die Tätigkeit eines Revierfahrers die Bewachung von mehreren Objekten, Gebäuden oder Außenanlagen. Diese erfolgt laut einem festgelegten Revierplan.\n\nUnser Revierfahrer fährt jedes Objektziel an und führt eine umfassende Kontrolle and Besichtigung durch. Je nach Wunsch kann auch das Verschließen und das Öffnen Ihrer Firma oder Ihrer Gebäude zu unseren Aufgaben zählen. Auch die Überwachung von hochwertigen Maschinen gehört dazu.",
       points: ["Kontrollgänge und Bestreifung", "Schließ- und Öffnungsdienst", "Verschlusskontrollen von Toren", "Alarmierung bei Beschädigung", "Freihaltung von Fluchtwegen", "Kontrolle unbefugter Personen", "Überfallkontrolle"],
@@ -282,7 +284,7 @@ const Services = () => {
       id: "personal",
       icon: Award, 
       title: "Personenschutz", 
-      img: "/hero.png",
+      img: `${base}hero.png`,
       description: "Diskretion und operative Überlegenheit für Ihren persönlichen Freiraum.", 
       fullDescription: "Operativer Schutz für exponierte Persönlichkeiten. Wir gewährleisten Ihre physische Integrität durch lückenlose Planung und diskrete Präsenz. Unsere Experten analysieren Gefahrenlagen in Echtzeit und agieren proaktiv.\n\nSicherheit ist kein Zufall, sondern das Ergebnis klinischer Präzision.",
       points: ["Gefährdungsanalyse", "Personenschutz im In- und Ausland", "Begleitschutz bei Veranstaltungen", "Diskrete operative Begleitung", "Transport-Sicherung"],
