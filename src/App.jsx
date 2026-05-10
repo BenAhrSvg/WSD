@@ -295,9 +295,9 @@ const Services = () => {
   return (
     <section id="leistungen" className="bg-white">
       <div className="section-container">
-        <div className="flex items-baseline gap-6 mb-24 border-b border-wsp-obsidian pb-8">
-          <span className="text-4xl font-black opacity-10 tracking-tighter">01</span>
-          <h2 className="text-4xl font-black uppercase tracking-tight">Leistungsspektrum</h2>
+        <div className="flex flex-col md:flex-row items-start md:items-baseline gap-2 md:gap-6 mb-16 md:mb-24 border-b border-wsp-obsidian pb-8">
+          <span className="text-4xl md:text-5xl font-black opacity-10 tracking-tighter">01</span>
+          <h2 className="text-[clamp(1.5rem,6vw,2.25rem)] md:text-4xl font-black uppercase tracking-tight break-words">Leistungsspektrum</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -325,9 +325,9 @@ const AboutUs = () => {
       <div className="absolute top-0 right-0 w-64 h-64 bg-wsp-signal/5 -mr-32 -mt-32 rounded-full blur-3xl"></div>
       
       <div className="section-container relative z-10">
-        <div className="flex items-baseline gap-6 mb-24 border-b border-white/20 pb-8">
-          <span className="text-4xl font-black opacity-10 tracking-tighter">02</span>
-          <h2 className="text-4xl font-black uppercase tracking-tight">Über Uns</h2>
+        <div className="flex flex-col md:flex-row items-start md:items-baseline gap-2 md:gap-6 mb-16 md:mb-24 border-b border-white/20 pb-8">
+          <span className="text-4xl md:text-5xl font-black opacity-10 tracking-tighter">02</span>
+          <h2 className="text-[clamp(1.5rem,6vw,2.25rem)] md:text-4xl font-black uppercase tracking-tight break-words">Über Uns</h2>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
@@ -393,9 +393,9 @@ const Partners = () => {
 const Jobs = () => (
   <section id="jobs" className="bg-white">
     <div className="section-container">
-      <div className="flex items-baseline gap-6 mb-24 border-b border-wsp-obsidian pb-8">
-        <span className="text-4xl font-black opacity-10 tracking-tighter">03</span>
-        <h2 className="text-4xl font-black uppercase tracking-tight">Karriere</h2>
+      <div className="flex flex-col md:flex-row items-start md:items-baseline gap-2 md:gap-6 mb-16 md:mb-24 border-b border-wsp-obsidian pb-8">
+        <span className="text-4xl md:text-5xl font-black opacity-10 tracking-tighter">03</span>
+        <h2 className="text-[clamp(1.5rem,6vw,2.25rem)] md:text-4xl font-black uppercase tracking-tight break-words">Karriere</h2>
       </div>
       
       <div className="clinical-card max-w-4xl border-l-8 border-l-wsp-signal">
@@ -448,9 +448,9 @@ const Jobs = () => (
 const Contact = () => (
   <section id="kontakt" className="bg-slate-50 border-t border-slate-100">
     <div className="section-container">
-      <div className="flex items-baseline gap-6 mb-24 border-b border-wsp-obsidian pb-8">
-        <span className="text-4xl font-black opacity-10 tracking-tighter">04</span>
-        <h2 className="text-4xl font-black uppercase tracking-tight">Kommandozentrale</h2>
+      <div className="flex flex-col md:flex-row items-start md:items-baseline gap-2 md:gap-6 mb-16 md:mb-24 border-b border-wsp-obsidian pb-8">
+        <span className="text-4xl md:text-5xl font-black opacity-10 tracking-tighter">04</span>
+        <h2 className="text-[clamp(1.5rem,6vw,2.25rem)] md:text-4xl font-black uppercase tracking-tight break-words">Kommandozentrale</h2>
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
